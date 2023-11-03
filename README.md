@@ -3,6 +3,8 @@
 T2/Pebble theme for Mastodon. The theme currently doesn't support the advanced interface and I don't have plans for it, as Pebble never had it in the first place. *But if a group of people will want to see it happen at some point, I'll see what I can do*.
 
 ## How to install as default theme (Instance admins)
+**I don't recommend setting it as default yet, as it still has minor bugs**
+
 Copy the contents of layout-single-column.css and paste it to the Custom CSS in the Appearance settings in your instance (https://example.com/admin/settings/appearance).
 
 ## How to install as default theme (Invidual users)
