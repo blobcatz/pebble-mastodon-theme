@@ -41,7 +41,7 @@
 .theme-mastodon-light .compose-form__autosuggest-wrapper {
   border-bottom: 0;
 }
-.theme-mastodon-light .compose-form__poll-wrapper .button.button-secondary {
+.theme-mastodon-light .button.button-secondary {
   color: #fff;
 }
 .theme-mastodon-light .dropdown-menu__item a,
