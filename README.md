@@ -8,3 +8,6 @@ Copy the contents of layout-single-column.css and paste it to the Custom CSS in 
 ## How to install as default theme (Invidual users)
 Install an extension that supports userstyles, Stylus is recommended ([Download it on Chrome(-based browser)](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne), [Download it on Firefox](https://addons.mozilla.org/firefox/addon/styl-us/)).
 Go to [the theme's page on UserStyles.world](https://userstyles.world/style/12847/pebble-theme-for-mastodon) and install it.
+
+### Credits
+The theme uses some icons from T2/Pebble and some code for the bottom navigation bar from https://github.com/ronilaukkarinen/mastodon-bird-ui under MIT License
