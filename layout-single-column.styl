@@ -459,7 +459,7 @@
                 }
             }
         }
-        .column-header__setting-btn i::before {
+        .column-header__setting-btn i::before, .ui__header__links i::before {
             visibility: visible;
         }
         .column-header__buttons 
@@ -677,6 +677,12 @@
     }
 
     @media (max-width: 1175px) {
+        .layout-single-column .search__icon .fa-search.active {
+            top: 7px;
+        }
+        .layout-single-column .search__icon .fa-times-circle.active {
+            top: 9px;
+        }
         .logo--wordmark {
             height: 35px !important;
             width: 95px !important;
