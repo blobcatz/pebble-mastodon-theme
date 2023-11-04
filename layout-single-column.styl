@@ -21,7 +21,10 @@
                 color: white;
             }
         }
-        .muted .status__content, .muted .status__content a, .muted .status__content p, .muted .status__display-name strong {
+        .muted .status__content,
+        .muted .status__content a,
+        .muted .status__content p,
+        .muted .status__display-name strong {
             color: #d3d3d3;
         }
         .emoji-mart-anchor {
@@ -35,6 +38,11 @@
         }
         .status__action-bar .icon-button {
             filter: brightness(2);
+        }
+        .status__visibility-icon i,
+        .detailed-status__meta i,
+        .column-header__icon {
+            filter: grayscale(1) brightness(3) !important;
         }
     }
     .theme-mastodon-light {
@@ -119,6 +127,16 @@
         background: var(--background);
     }
     .layout-single-column {
+        .compose-form__publish-button-wrapper button {
+            font-size: 0px;
+            line-height: 0;
+        }
+
+        .compose-form__publish-button-wrapper button:after {
+            content: 'Post';
+            display: block;
+            font-size: 15px;
+        }
         .button.button-secondary,
         .button.button-tertiary {
             border: 0;

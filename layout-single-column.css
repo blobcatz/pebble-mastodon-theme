@@ -39,6 +39,11 @@
 .theme-contrast .status__action-bar .icon-button {
   filter: brightness(2);
 }
+.theme-contrast .status__visibility-icon i,
+.theme-contrast .detailed-status__meta i,
+.theme-contrast .column-header__icon {
+  filter: grayscale(1) brightness(3) !important;
+}
 .theme-mastodon-light {
   --background: #fff;
   --search-background: transparent;
@@ -115,6 +120,15 @@
 }
 body {
   background: var(--background);
+}
+.layout-single-column .compose-form__publish-button-wrapper button {
+  font-size: 0px;
+  line-height: 0;
+}
+.layout-single-column .compose-form__publish-button-wrapper button:after {
+  content: 'Post';
+  display: block;
+  font-size: 15px;
 }
 .layout-single-column .button.button-secondary,
 .layout-single-column .button.button-tertiary {
