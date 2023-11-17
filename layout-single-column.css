@@ -486,7 +486,8 @@ body {
 .layout-single-column .column-header__setting-btn i::before,
 .layout-single-column .ui__header__links i::before,
 .layout-single-column .video-player i::before,
-.layout-single-column .list-editor i::before {
+.layout-single-column .list-editor i::before,
+.layout-single-column .fa-plus::before {
   visibility: visible;
 }
 .layout-single-column .column-header__buttons,
