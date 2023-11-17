@@ -31,7 +31,8 @@
 .theme-contrast .muted .status__display-name strong {
   color: #d3d3d3;
 }
-.theme-contrast .emoji-mart-anchor {
+.theme-contrast .emoji-mart-anchor,
+.theme-contrast .character-counter {
   color: #fff !important;
 }
 .theme-contrast .emoji-mart-anchor-selected {
