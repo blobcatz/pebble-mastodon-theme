@@ -551,7 +551,8 @@ body {
 .layout-single-column .scrollable .account-card__bio::after {
   display: none;
 }
-.layout-single-column .column-inline-form {
+.layout-single-column .column-inline-form,
+.layout-single-column .search__popout {
   border-radius: 4px;
   background: var(--search-background);
 }
