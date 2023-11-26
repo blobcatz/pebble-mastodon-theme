@@ -535,8 +535,11 @@ body {
 .layout-single-column .ui__header__links i::before,
 .layout-single-column .video-player i::before,
 .layout-single-column .list-editor i::before,
-.layout-single-column .fa-plus::before,
-.layout-single-column .status-card i::before {
+.layout-single-column .status-card i::before,
+.layout-single-column .media-modal__nav i::before {
+  visibility: visible;
+}
+.layout-single-column .fa-plus::before {
   visibility: visible;
 }
 .layout-single-column .column-header__buttons,

@@ -511,7 +511,12 @@
                 }
             }
         }
-        .column-header__setting-btn i::before, .ui__header__links i::before, .video-player i::before, .list-editor i::before, .fa-plus::before, .status-card i::before {
+        .column-header__setting-btn, .ui__header__links, .video-player, .list-editor, .status-card, .media-modal__nav {
+            i::before {
+                visibility: visible;
+            }
+        }
+        .fa-plus::before {
             visibility: visible;
         }
         .column-header__buttons 
