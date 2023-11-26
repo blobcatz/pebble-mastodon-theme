@@ -487,7 +487,8 @@ body {
 .layout-single-column .ui__header__links i::before,
 .layout-single-column .video-player i::before,
 .layout-single-column .list-editor i::before,
-.layout-single-column .fa-plus::before {
+.layout-single-column .fa-plus::before,
+.layout-single-column .status-card i::before {
   visibility: visible;
 }
 .layout-single-column .column-header__buttons,
@@ -809,5 +810,5 @@ body {
   }
 }
 .link-footer p:first-child::after {
-  content: " · Pebble theme for Mastodon v1.0.9 by @blobcat@pebble.social";
+  content: " · Pebble theme for Mastodon v1.0.9+main by @blobcat@pebble.social";
 }
