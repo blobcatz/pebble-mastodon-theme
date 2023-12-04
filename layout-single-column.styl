@@ -643,6 +643,9 @@
         .report-modal__comment .setting-text-label {
             color: #606984;
         }
+        .privacy-dropdown__option.active .privacy-dropdown__option__content, .privacy-dropdown__option:hover .privacy-dropdown__option__content, .privacy-dropdown__option:hover .privacy-dropdown__option__content strong, .privacy-dropdown__option.active .privacy-dropdown__option__content strong {
+            color: var(--text-color);
+        }
         .text-icon-button {
             color: #6A44DD;
         }
@@ -700,8 +703,8 @@
             background: transparent;
             color: #9baec8;
         }
-        .language-dropdown__dropdown__results__item {
-            color: white;
+        .language-dropdown__dropdown__results__item.active {
+            background: #6A44DD;
         }
         .emoji-mart-anchor {
             color: #414658;
@@ -709,7 +712,9 @@
         .emoji-mart-anchor-selected {
             color: #6A44DD;
         }
-        .language-dropdown__dropdown__results__item.active,
+        .language-dropdown__dropdown__results__item.active {
+            color: white;
+        }
         .emoji-mart-anchor-bar {
             background: #6A44DD;
         }
@@ -720,6 +725,7 @@
         .language-dropdown__dropdown__results__item:focus,
         .language-dropdown__dropdown__results__item:hover {
             background: var(--item-hover);
+            color: var(--text-color);
         }
         .emoji-mart-search input {
             background: var(--search-background);
@@ -844,5 +850,5 @@
         }
     }
     .link-footer p:first-child::after {
-        content: " · Pebble theme for Mastodon v1.1.0 by @blobcat@pebble.social";
+        content: " · Pebble theme for Mastodon v1.1.0+main by @blobcat@pebble.social";
     }
