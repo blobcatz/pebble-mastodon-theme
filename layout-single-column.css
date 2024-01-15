@@ -706,26 +706,52 @@ body {
   text-align: end;
   padding-right: 15px;
 }
+.layout-single-column .account__header__bar .avatar {
+  height: 140px;
+  margin-top: -30px;
+}
+.layout-single-column .account__header__bar .avatar .account__avatar {
+  width: 133px !important;
+  height: 133px !important;
+  border: 4px solid var(--background);
+}
+.layout-single-column .account__header__image {
+  height: 200px;
+}
+.layout-single-column .account__header__tabs {
+  overflow: visible;
+}
+.layout-single-column .account__header__tabs__name h1 > span {
+  font-size: 20px;
+}
+.layout-single-column .account__header__bar,
 .layout-single-column .account__header__bio .account__header__fields {
   background: transparent;
 }
+.layout-single-column .account__header__bar dl,
 .layout-single-column .account__header__bio .account__header__fields dl {
   display: inline;
   border: 0;
   padding: 0;
 }
+.layout-single-column .account__header__bar dl dt,
 .layout-single-column .account__header__bio .account__header__fields dl dt,
+.layout-single-column .account__header__bar dl dd,
 .layout-single-column .account__header__bio .account__header__fields dl dd {
   display: inline;
 }
+.layout-single-column .account__header__bar dl dt span,
 .layout-single-column .account__header__bio .account__header__fields dl dt span,
+.layout-single-column .account__header__bar dl dd span,
 .layout-single-column .account__header__bio .account__header__fields dl dd span {
   margin-right: 2px;
 }
+.layout-single-column .account__header__bar dl:not(:last-child)::after,
 .layout-single-column .account__header__bio .account__header__fields dl:not(:last-child)::after {
   content: ' · ';
   display: inline;
 }
+.layout-single-column .account__header__bar .verified,
 .layout-single-column .account__header__bio .account__header__fields .verified {
   padding-inline: 6px;
   border-radius: 9999px;
@@ -733,6 +759,13 @@ body {
 .layout-single-column .verified-badge {
   display: flex;
   align-items: flex-end;
+}
+.layout-single-column .account__header__fields dl:first-child dt::before {
+  content: '\f133';
+  font-family: FontAwesome;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
 }
 .layout-single-column .account__header__fields .verified,
 .layout-single-column .verified-badge {
@@ -892,5 +925,5 @@ body {
   }
 }
 .link-footer p:first-child::after {
-  content: " · Pebble theme for Mastodon v1.1.1 by @blobcat@pebble.social";
+  content: " · Pebble theme for Mastodon v1.2.0+main by @blobcat@pebble.social";
 }

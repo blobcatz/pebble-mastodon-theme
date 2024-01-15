@@ -661,6 +661,27 @@
             text-align: end;
             padding-right: 15px;
         }
+        .account__header__bar {
+            .avatar {
+                height: 140px;
+                margin-top: -30px;
+            }
+            .avatar .account__avatar {
+                width: 133px !important;
+                height: 133px !important;
+                border: 4px solid var(--background);
+            }
+        }
+        .account__header__image {
+            height: 200px;
+        }
+        .account__header__tabs {
+            overflow: visible;
+        }
+        .account__header__tabs__name h1 > span {
+            font-size: 20px;
+        }
+        .account__header__bar 
         .account__header__bio .account__header__fields {
             background: transparent;
             dl {
@@ -687,6 +708,13 @@
         .verified-badge {
             display: flex;
             align-items: flex-end;
+        }
+        .account__header__fields dl:first-child dt::before {
+            content: '\f133';
+            font-family: FontAwesome;
+            display: inline-block;
+            width: 15px;
+            height: 15px;
         }
         .account__header__fields .verified, .verified-badge {
             border-radius: 999px;
@@ -857,5 +885,5 @@
         }
     }
     .link-footer p:first-child::after {
-        content: " · Pebble theme for Mastodon v1.1.1 by @blobcat@pebble.social";
+        content: " · Pebble theme for Mastodon v1.2.0+main by @blobcat@pebble.social";
     }
