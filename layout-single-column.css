@@ -195,6 +195,14 @@
 .theme-mastodon-light .verified-badge {
   background: rgba(154,107,255,0.4);
 }
+.theme-mastodon-light .status__prepend,
+.theme-mastodon-light .actions-modal ul li:not(:empty) a {
+  color: #000 !important;
+}
+.theme-mastodon-light .status__wrapper-direct .status__prepend-icon-wrapper .fa,
+.theme-mastodon-light .detailed-status__wrapper-direct .status__prepend-icon-wrapper .fa {
+  filter: brightness(0) invert(0) !important;
+}
 body {
   background: var(--background);
 }
@@ -358,6 +366,53 @@ body {
   transition-duration: 0.5s;
   transition-property: background;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.layout-single-column .status__prepend {
+  background: var(--border-color);
+  padding: 0;
+  padding-inline: 8px;
+  margin: 13px 16px 0;
+  border-radius: 99px;
+  border: 2px solid var(--background);
+  z-index: 1;
+  gap: 6px;
+}
+.layout-single-column .detailed-status .status__prepend {
+  margin: 13px 0 13px;
+}
+.layout-single-column .detailed-status::before {
+  content: ' ';
+  display: inline-block;
+  width: 2px;
+  position: absolute;
+  height: 12px;
+  left: 38px;
+  margin-top: -16px;
+  background: var(--border-color);
+  z-index: -1;
+}
+.layout-single-column .detailed-status__wrapper-direct .detailed-status::before {
+  height: 66px;
+}
+.layout-single-column .scrollable > div:first-child .detailed-status::before {
+  display: none;
+}
+.layout-single-column .status__wrapper-direct .status__line,
+.layout-single-column .detailed-status__wrapper-direct .status__line {
+  height: 53px;
+  z-index: -1;
+}
+.layout-single-column .status__wrapper-direct .status__line--full,
+.layout-single-column .detailed-status__wrapper-direct .status__line--full {
+  height: 100%;
+}
+.layout-single-column .status__wrapper-direct .status__prepend-icon-wrapper,
+.layout-single-column .detailed-status__wrapper-direct .status__prepend-icon-wrapper {
+  margin-top: -1px;
+}
+.layout-single-column .status__wrapper-direct .status__prepend-icon-wrapper .fa,
+.layout-single-column .detailed-status__wrapper-direct .status__prepend-icon-wrapper .fa {
+  filter: brightness(0) invert(1) invert(55%) sepia(18%) saturate(1516%) hue-rotate(201deg) brightness(102%) contrast(101%);
 }
 .layout-single-column .notification .status__wrapper:hover {
   background: transparent !important;
@@ -952,5 +1007,5 @@ body {
   }
 }
 .link-footer p:first-child::after {
-  content: " · Pebble theme for Mastodon v1.2.0+main by @blobcat@pebble.social";
+  content: " · Pebble theme for Mastodon v1.2.0 by @blobcat@pebble.social";
 }

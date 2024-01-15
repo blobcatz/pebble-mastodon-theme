@@ -175,6 +175,14 @@
         .account__header__fields .verified, .verified-badge {
             background: hsla(259, 100%, 71%, .4);
         }
+        .status__prepend, .actions-modal ul li:not(:empty) a {
+            color: black !important;
+        }
+        .status__wrapper-direct, .detailed-status__wrapper-direct {
+            .status__prepend-icon-wrapper .fa {
+                    filter: brightness(0) invert(0) !important;
+                }
+            }
     }
     body {
         background: var(--background);
@@ -338,6 +346,51 @@
                 transition-duration: .5s;
                 transition-property: background;
                 transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+            }
+        }
+        .status__prepend {
+            background: var(--border-color);
+            padding: 0;
+            padding-inline: 8px;
+            margin: 13px 16px 0;
+            border-radius: 99px;
+            border: 2px solid var(--background);
+            z-index: 1;
+            gap: 6px;
+        }
+        .detailed-status .status__prepend {
+            margin: 13px 0 13px;
+        }
+        .detailed-status::before {
+            content: ' ';
+            display: inline-block;
+            width: 2px;
+            position: absolute;
+            height: 12px;
+            left: 38px;
+            margin-top: -16px;
+            background: var(--border-color);
+            z-index: -1;
+        }
+        .detailed-status__wrapper-direct .detailed-status::before {
+            height: 66px;
+        }
+        .scrollable > div:first-child .detailed-status::before {
+            display: none;
+        }
+        .status__wrapper-direct, .detailed-status__wrapper-direct {
+            .status__line {
+                height: 53px;
+                z-index: -1;
+            }
+            .status__line--full {
+                height: 100%;
+            }
+            .status__prepend-icon-wrapper {
+                margin-top: -1px;
+                .fa {
+                    filter: brightness(0) invert(1) invert(55%) sepia(18%) saturate(1516%) hue-rotate(201deg) brightness(102%) contrast(101%);
+                }
             }
         }
         .notification .status__wrapper:hover {
@@ -911,5 +964,5 @@
         }
     }
     .link-footer p:first-child::after {
-        content: " · Pebble theme for Mastodon v1.2.0+main by @blobcat@pebble.social";
+        content: " · Pebble theme for Mastodon v1.2.0 by @blobcat@pebble.social";
     }
