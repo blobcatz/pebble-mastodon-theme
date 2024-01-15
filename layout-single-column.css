@@ -406,10 +406,6 @@ body {
 .layout-single-column .detailed-status__wrapper-direct .status__line--full {
   height: 100%;
 }
-.layout-single-column .status__wrapper-direct .status__prepend-icon-wrapper,
-.layout-single-column .detailed-status__wrapper-direct .status__prepend-icon-wrapper {
-  margin-top: -1px;
-}
 .layout-single-column .status__wrapper-direct .status__prepend-icon-wrapper .fa,
 .layout-single-column .detailed-status__wrapper-direct .status__prepend-icon-wrapper .fa {
   filter: brightness(0) invert(1) invert(55%) sepia(18%) saturate(1516%) hue-rotate(201deg) brightness(102%) contrast(101%);
@@ -593,8 +589,6 @@ body {
 }
 .layout-single-column .status__prepend .fa {
   filter: invert(42%) sepia(12%) saturate(855%) hue-rotate(188deg) brightness(94%) contrast(90%);
-  width: 18px;
-  height: 18px;
 }
 .layout-single-column .icon-with-badge__badge {
   background: #e03131;
