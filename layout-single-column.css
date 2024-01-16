@@ -792,7 +792,9 @@ body {
   border: 4px solid var(--background);
 }
 .layout-single-column .account__header__image {
-  height: 200px;
+  aspect-ratio: 3/1;
+  width: 100%;
+  height: 100%;
 }
 .layout-single-column .account__header__tabs {
   overflow: visible;
@@ -928,6 +930,14 @@ body {
   }
 }
 @media screen and (max-width: 889px) {
+  .layout-single-column .account__header__bar .avatar {
+    height: 90px;
+    margin-top: 0;
+  }
+  .layout-single-column .account__header__bar .avatar .account__avatar {
+    width: 90px !important;
+    height: 90px !important;
+  }
   .layout-single-column .columns-area__panels__main {
     order: 1;
     position: unset;
@@ -1001,5 +1011,5 @@ body {
   }
 }
 .link-footer p:first-child::after {
-  content: " · Pebble theme for Mastodon v1.2.0 by @blobcat@pebble.social";
+  content: " · Pebble theme for Mastodon v1.2.0+main by @blobcat@pebble.social";
 }
