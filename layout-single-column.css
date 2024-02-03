@@ -1702,5 +1702,5 @@ body.app-body.layout-single-column,
 }
 }
 .link-footer p:first-child::after {
-  content: " · Pebble theme for Mastodon v1.3.0+main by @blobcat@pebble.social";
+  content: " · Pebble theme for Mastodon v1.3.1 by @blobcat@pebble.social";
 }
