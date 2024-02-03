@@ -1033,6 +1033,35 @@
 			    height: 18px;
 		    }
 	    }
+		.column-header__wrapper.active .column-header.active > button:after {
+            box-sizing: border-box;
+            top: 4.25rem;
+            border-radius: 1rem;
+            background: #6a44dd;
+            font-weight: 500;
+            padding: 5px 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+            position: fixed;
+            content: "There are new posts";
+            font-size: 14px;
+            box-shadow: #68646f29 0px 0px 8px 6px;
+            animation: new-posts-slide-in 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;   
+	    }
+	    @keyframes new-posts-slide-in {
+	    	0% {
+	    		-webkit-transform: translateX(-50%) translateY(-10px);
+	    		transform: translateX(-50%) translateY(-100px);
+	    		opacity: 0;
+	    	}
+	    	100% {
+	    		-webkit-transform: translateX(-50%) translateY(0);
+	    		transform: translateX(-50%) translateY(0);
+	     		opacity: 1;
+	      	}
+	}
+		
     }
     .admin-wrapper {
         background: var(--background);

@@ -1023,6 +1023,22 @@ body.app-body.layout-single-column,
   width: 18px;
   height: 18px;
 }
+.layout-single-column .column-header__wrapper.active .column-header.active > button:after {
+  box-sizing: border-box;
+  top: 4.25rem;
+  border-radius: 1rem;
+  background: #6a44dd;
+  font-weight: 500;
+  padding: 5px 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  position: fixed;
+  content: "There are new posts";
+  font-size: 14px;
+  box-shadow: rgba(104,100,111,0.161) 0px 0px 8px 6px;
+  animation: new-posts-slide-in 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
 @-moz-keyframes click-like {
   0% {
     transform: scale(1, 1);
@@ -1341,6 +1357,54 @@ body.app-body.layout-single-column,
   }
   to {
     transform: scale(1.2, 1.2);
+  }
+}
+@-moz-keyframes new-posts-slide-in {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-10px);
+    transform: translateX(-50%) translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes new-posts-slide-in {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-10px);
+    transform: translateX(-50%) translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+@-o-keyframes new-posts-slide-in {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-10px);
+    transform: translateX(-50%) translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes new-posts-slide-in {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-10px);
+    transform: translateX(-50%) translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
   }
 }
 .admin-wrapper {
