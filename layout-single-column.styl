@@ -402,6 +402,9 @@
         .scrollable > div:last-child > .status__wrapper > .status {
             border-bottom: 1px solid var(--border-color) !important;
         }
+		.account__avatar {
+			border-radius: 50%;
+		}
         .status__avatar .account__avatar {
             box-shadow: 0 0 0 3px var(--background);
         }
@@ -1001,6 +1004,12 @@
             content: var(--logo);
             width: 160px !important;
         }
+		.lead .fa-check {
+			background-size: 18px;
+			&::before {
+			    content: unset;
+			}
+		}
         .sidebar__toggle__logo .logo {
             background-image: var(--logo);
             background-size: contain;
@@ -1374,5 +1383,5 @@
         }
     }
     .link-footer p:first-child::after {
-        content: " · Pebble theme for Mastodon v1.3.0 by @blobcat@pebble.social";
+        content: " · Pebble theme for Mastodon v1.3.0+main by @blobcat@pebble.social";
     }

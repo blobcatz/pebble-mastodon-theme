@@ -426,6 +426,9 @@ body.app-body.layout-single-column,
 .layout-single-column .scrollable > div:last-child > .status__wrapper > .status {
   border-bottom: 1px solid var(--border-color) !important;
 }
+.layout-single-column .account__avatar {
+  border-radius: 50%;
+}
 .layout-single-column .status__avatar .account__avatar {
   box-shadow: 0 0 0 3px var(--background);
 }
@@ -1307,6 +1310,12 @@ body.app-body.layout-single-column,
   content: var(--logo);
   width: 160px !important;
 }
+.admin-wrapper .lead .fa-check {
+  background-size: 18px;
+}
+.admin-wrapper .lead .fa-check::before {
+  content: unset;
+}
 .admin-wrapper .sidebar__toggle__logo .logo {
   background-image: var(--logo);
   background-size: contain;
@@ -1700,5 +1709,5 @@ body.app-body.layout-single-column,
 }
 }
 .link-footer p:first-child::after {
-  content: " · Pebble theme for Mastodon v1.3.0 by @blobcat@pebble.social";
+  content: " · Pebble theme for Mastodon v1.3.0+main by @blobcat@pebble.social";
 }
