@@ -1037,7 +1037,7 @@ body.app-body.layout-single-column,
   content: "There are new posts";
   font-size: 14px;
   box-shadow: rgba(104,100,111,0.161) 0px 0px 8px 6px;
-  animation: new-posts-slide-in 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: new-posts-animation 5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 @-moz-keyframes click-like {
   0% {
@@ -1359,52 +1359,92 @@ body.app-body.layout-single-column,
     transform: scale(1.2, 1.2);
   }
 }
-@-moz-keyframes new-posts-slide-in {
+@-moz-keyframes new-posts-animation {
   0% {
     -webkit-transform: translateX(-50%) translateY(-10px);
     transform: translateX(-50%) translateY(-100px);
     opacity: 0;
   }
-  100% {
+  10% {
     -webkit-transform: translateX(-50%) translateY(0);
     transform: translateX(-50%) translateY(0);
     opacity: 1;
+  }
+  90% {
+    -webkit-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-10px);
+    transform: translateX(-50%) translateY(-100px);
+    opacity: 0;
   }
 }
-@-webkit-keyframes new-posts-slide-in {
+@-webkit-keyframes new-posts-animation {
   0% {
     -webkit-transform: translateX(-50%) translateY(-10px);
     transform: translateX(-50%) translateY(-100px);
     opacity: 0;
   }
-  100% {
+  10% {
     -webkit-transform: translateX(-50%) translateY(0);
     transform: translateX(-50%) translateY(0);
     opacity: 1;
+  }
+  90% {
+    -webkit-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-10px);
+    transform: translateX(-50%) translateY(-100px);
+    opacity: 0;
   }
 }
-@-o-keyframes new-posts-slide-in {
+@-o-keyframes new-posts-animation {
   0% {
     -webkit-transform: translateX(-50%) translateY(-10px);
     transform: translateX(-50%) translateY(-100px);
     opacity: 0;
   }
-  100% {
+  10% {
     -webkit-transform: translateX(-50%) translateY(0);
     transform: translateX(-50%) translateY(0);
     opacity: 1;
+  }
+  90% {
+    -webkit-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-10px);
+    transform: translateX(-50%) translateY(-100px);
+    opacity: 0;
   }
 }
-@keyframes new-posts-slide-in {
+@keyframes new-posts-animation {
   0% {
     -webkit-transform: translateX(-50%) translateY(-10px);
     transform: translateX(-50%) translateY(-100px);
     opacity: 0;
   }
-  100% {
+  10% {
     -webkit-transform: translateX(-50%) translateY(0);
     transform: translateX(-50%) translateY(0);
     opacity: 1;
+  }
+  90% {
+    -webkit-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-10px);
+    transform: translateX(-50%) translateY(-100px);
+    opacity: 0;
   }
 }
 .admin-wrapper {
