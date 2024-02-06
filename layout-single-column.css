@@ -995,16 +995,14 @@ body.app-body.layout-single-column,
 .layout-single-column .modal-root__overlay {
   background: rgba(0,0,0,0.7) !important;
 }
-.layout-single-column .column-header__buttons:has(.fa-eye),
-.layout-single-column .column-header__buttons:has(.fa-eye-slash) {
-  display: grid;
+.layout-single-column .columns-area__panels__main:has(.detailed-status) .column-header__buttons {
+  display: none !important;
+}
+.layout-single-column .columns-area__panels__main:has(.status__content--with-spoiler) .column-header__buttons {
+  display: grid !important;
   justify-content: center;
   align-items: center;
   height: auto;
-}
-.layout-single-column .columns-area__panels__main:not(:has(.status__content--with-spoiler)) .column-header__buttons:has(.fa-eye),
-.layout-single-column .column-header__buttons:has(.fa-eye-slash) {
-  display: none !important;
 }
 .layout-single-column .column-header__buttons .column-header__button:has(.fa-eye),
 .layout-single-column .column-header__buttons .column-header__button:has(.fa-eye-slash) {
@@ -1869,5 +1867,5 @@ body.app-body.layout-single-column,
 }
 }
 .link-footer p:first-child::after {
-  content: " �� Pebble theme for Mastodon v1.3.1+main6 by @blobcat@pebble.social";
+  content: " �� Pebble theme for Mastodon v1.3.1+main7 by @blobcat@pebble.social";
 }
