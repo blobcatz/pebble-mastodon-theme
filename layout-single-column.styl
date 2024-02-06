@@ -887,7 +887,7 @@
                     }
                 }
                 &:not(:last-child)::after {
-                    content: ' Â· ';
+                    content: ' ¡¤ ';
                     display: inline;
                 }
             }
@@ -1070,8 +1070,8 @@
 	    		transform: translateX(-50%) translateY(-100px);
 	    		opacity: 0;
 	    	}
-    }
-	
+	}
+		
     }
     .admin-wrapper {
         background: var(--background);
@@ -1289,10 +1289,14 @@
 			padding-right: 0;
 			padding-left: 60px;
 		}
-		.ui__header__links > a:last-child {
-			right: unset;
-			left: 1rem;
-		}
+        > a:last-child:not([href="/auth/sign_in"]) {
+            left: 1rem;
+        }
+        &:has([href="/auth/sign_in"]) {
+            position: absolute;
+            right: 0;
+            top: .8rem;
+        }
 	}
         .layout-single-column .account__header__bar .avatar {
             height: 90px;
@@ -1333,7 +1337,7 @@
             > a[href="/search"] {
                 display: none;
             }
-            > a:last-child {
+            > a:last-child:not([href="/auth/sign_in"]) {
                 position: fixed;
                 z-index: 1;
                 right: 1rem;
@@ -1342,6 +1346,11 @@
             }
             > a[href="/publish"] ~ a:last-child {
                 display: block;
+            }
+            &:has([href="/auth/sign_in"]) {
+                position: absolute;
+                right: 0;
+                top: .8rem;
             }
         }
         .columns-area--mobile:has( .compose-form) {
@@ -1463,5 +1472,5 @@
         }
     }
     .link-footer p:first-child::after {
-        content: " Â· Pebble theme for Mastodon v1.3.1+main by @blobcat@pebble.social";
+        content: " ¡¤ Pebble theme for Mastodon v1.3.1+main6 by @blobcat@pebble.social";
     }

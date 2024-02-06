@@ -882,7 +882,7 @@ body.app-body.layout-single-column,
 }
 .layout-single-column .account__header__bar dl:not(:last-child)::after,
 .layout-single-column .account__header__bio .account__header__fields dl:not(:last-child)::after {
-  content: ' · ';
+  content: ' �� ';
   display: inline;
 }
 .layout-single-column .account__header__bar .verified,
@@ -1662,9 +1662,13 @@ body.app-body.layout-single-column,
     padding-right: 0;
     padding-left: 60px;
   }
-  html[dir="rtl"] .ui__header__links > a:last-child {
-    right: unset;
+  html[dir="rtl"] > a:last-child:not([href="/auth/sign_in"]) {
     left: 1rem;
+  }
+  html[dir="rtl"]:has([href="/auth/sign_in"]) {
+    position: absolute;
+    right: 0;
+    top: 0.8rem;
   }
   .layout-single-column .account__header__bar .avatar {
     height: 90px;
@@ -1704,7 +1708,7 @@ body.app-body.layout-single-column,
   .ui__header__links > a[href="/search"] {
     display: none;
   }
-  .ui__header__links > a:last-child {
+  .ui__header__links > a:last-child:not([href="/auth/sign_in"]) {
     position: fixed;
     z-index: 1;
     right: 1rem;
@@ -1713,6 +1717,11 @@ body.app-body.layout-single-column,
   }
   .ui__header__links > a[href="/publish"] ~ a:last-child {
     display: block;
+  }
+  .ui__header__links:has([href="/auth/sign_in"]) {
+    position: absolute;
+    right: 0;
+    top: 0.8rem;
   }
   .columns-area--mobile:has(.compose-form) {
     margin-top: -50px;
@@ -1860,5 +1869,5 @@ body.app-body.layout-single-column,
 }
 }
 .link-footer p:first-child::after {
-  content: " · Pebble theme for Mastodon v1.3.1+main by @blobcat@pebble.social";
+  content: " �� Pebble theme for Mastodon v1.3.1+main6 by @blobcat@pebble.social";
 }
