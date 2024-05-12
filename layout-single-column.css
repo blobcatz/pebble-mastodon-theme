@@ -245,6 +245,7 @@ body.app-body.layout-single-column,
 }
 .layout-single-column .columns-area__panels .columns-area__panels__pane--navigational {
   order: 1;
+  z-index: 99;
 }
 .layout-single-column .logo--wordmark {
   height: 66px;
@@ -1924,5 +1925,5 @@ body.app-body.layout-single-column,
 }
 }
 .link-footer p:first-child::after {
-  content: " · Pebble theme for Mastodon v1.3.2.1 by @blobcat@pebble.social";
+  content: " · Pebble theme for Mastodon v1.3.2.2 by @blobcat@pebble.social";
 }
