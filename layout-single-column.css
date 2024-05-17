@@ -147,6 +147,13 @@
 .theme-mastodon-light .compose__action-bar-dropdown .fa {
   filter: brightness(0);
 }
+@media screen and (max-width: 889px) {
+  .theme-mastodon-light .column-link[href="/lists"] .fa-list-ul,
+  .theme-mastodon-light .column-link[href="/bookmarks"] .fa-bookmark,
+  .theme-mastodon-light .column-link[href="/favourites"] .fa-star {
+    filter: brightness(0);
+  }
+}
 .theme-mastodon-light .fa-close {
   filter: brightness(0.5);
 }
@@ -1609,7 +1616,502 @@ body.app-body.layout-single-column,
     filter: brightness(0) invert(34%) sepia(77%) saturate(5797%) hue-rotate(247deg) brightness(91%) contrast(89%);
   }
 }
+@media screen and (min-width: 390px) and (max-width: 889px) {
+  .columns-area--mobile .scrollable,
+  .scrollable {
+    contain: unset;
+  }
+  .detailed-status__button button:has(.fa-reply):after {
+    position: fixed;
+    content: "Reply to this post...";
+    bottom: 0.7em;
+    z-index: 100;
+    font-size: 0.8rem;
+    width: 95%;
+    left: 0;
+    background: var(--secondary-background);
+    margin-left: 2.5%;
+    padding: 0.8em 0px;
+    padding-inline: 0.8em;
+    display: flex;
+    border-radius: 100px;
+    box-sizing: border-box;
+  }
+  .ui:has(.detailed-status) .navigation-panel .navigation-panel__legal,
+  .ui:has(.detailed-status) .navigation-panel .column-link,
+  .ui:has(.detailed-status) .ui__header__links > a[href="/publish"] {
+    display: none !important;
+  }
+  html[lang*="en"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/home"] span,
+  html[lang="pl"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/home"] span,
+  html[lang="ja"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/home"] span,
+  html[lang="hi"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/home"] span,
+  html[lang="ko"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/home"] span,
+  html[lang="es"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/home"] span,
+  html[lang="es-MX"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/home"] span,
+  html[lang="pt-PT"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/home"] span,
+  html[lang="es-AR"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/home"] span,
+  html[lang="de"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/home"] span,
+  html[lang*="fr"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/home"] span,
+  html[lang="pt-BR"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/home"] span,
+  html[lang="hu"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/home"] span {
+    display: block;
+  }
+  html[lang*="en"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/home"] span,
+  html[lang="pl"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/home"] span,
+  html[lang="ja"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/home"] span,
+  html[lang="hi"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/home"] span,
+  html[lang="ko"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/home"] span,
+  html[lang="es"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/home"] span,
+  html[lang="es-MX"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/home"] span,
+  html[lang="pt-PT"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/home"] span,
+  html[lang="es-AR"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/home"] span,
+  html[lang="de"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/home"] span,
+  html[lang*="fr"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/home"] span,
+  html[lang="pt-BR"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/home"] span,
+  html[lang="hu"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/home"] span {
+    display: block;
+  }
+  html[lang*="en"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/home"]::before,
+  html[lang="pl"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/home"]::before,
+  html[lang="ja"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/home"]::before,
+  html[lang="hi"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/home"]::before,
+  html[lang="ko"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/home"]::before,
+  html[lang="es"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/home"]::before,
+  html[lang="es-MX"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/home"]::before,
+  html[lang="pt-PT"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/home"]::before,
+  html[lang="es-AR"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/home"]::before,
+  html[lang="de"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/home"]::before,
+  html[lang*="fr"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/home"]::before,
+  html[lang="pt-BR"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/home"]::before,
+  html[lang="hu"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/home"]::before {
+    content: '';
+  }
+  html[lang*="en"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/home"]::before,
+  html[lang="pl"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/home"]::before,
+  html[lang="ja"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/home"]::before,
+  html[lang="hi"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/home"]::before,
+  html[lang="ko"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/home"]::before,
+  html[lang="es"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/home"]::before,
+  html[lang="es-MX"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/home"]::before,
+  html[lang="pt-PT"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/home"]::before,
+  html[lang="es-AR"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/home"]::before,
+  html[lang="de"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/home"]::before,
+  html[lang*="fr"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/home"]::before,
+  html[lang="pt-BR"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/home"]::before,
+  html[lang="hu"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/home"]::before {
+    content: '';
+  }
+  html[lang*="en"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/public/local"] span,
+  html[lang="pl"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/public/local"] span,
+  html[lang="ja"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/public/local"] span,
+  html[lang="hi"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/public/local"] span,
+  html[lang="ko"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/public/local"] span,
+  html[lang="es"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/public/local"] span,
+  html[lang="es-MX"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/public/local"] span,
+  html[lang="pt-PT"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/public/local"] span,
+  html[lang="es-AR"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/public/local"] span,
+  html[lang="de"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/public/local"] span,
+  html[lang*="fr"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/public/local"] span,
+  html[lang="pt-BR"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/public/local"] span,
+  html[lang="hu"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/public/local"] span {
+    display: block;
+  }
+  html[lang*="en"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/public/local"] span,
+  html[lang="pl"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/public/local"] span,
+  html[lang="ja"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/public/local"] span,
+  html[lang="hi"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/public/local"] span,
+  html[lang="ko"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/public/local"] span,
+  html[lang="es"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/public/local"] span,
+  html[lang="es-MX"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/public/local"] span,
+  html[lang="pt-PT"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/public/local"] span,
+  html[lang="es-AR"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/public/local"] span,
+  html[lang="de"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/public/local"] span,
+  html[lang*="fr"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/public/local"] span,
+  html[lang="pt-BR"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/public/local"] span,
+  html[lang="hu"] .navigation-panel:has(.column-link.active[href="/public/local"]) .column-link--transparent[href="/public/local"] span {
+    display: block;
+  }
+  html[lang*="en"] .column-link--transparent[href="/public/local"],
+  html[lang="pl"] .column-link--transparent[href="/public/local"],
+  html[lang="ja"] .column-link--transparent[href="/public/local"],
+  html[lang="hi"] .column-link--transparent[href="/public/local"],
+  html[lang="ko"] .column-link--transparent[href="/public/local"],
+  html[lang="es"] .column-link--transparent[href="/public/local"],
+  html[lang="es-MX"] .column-link--transparent[href="/public/local"],
+  html[lang="pt-PT"] .column-link--transparent[href="/public/local"],
+  html[lang="es-AR"] .column-link--transparent[href="/public/local"],
+  html[lang="de"] .column-link--transparent[href="/public/local"],
+  html[lang*="fr"] .column-link--transparent[href="/public/local"],
+  html[lang="pt-BR"] .column-link--transparent[href="/public/local"],
+  html[lang="hu"] .column-link--transparent[href="/public/local"] {
+    flex: unset !important;
+    overflow: visible;
+  }
+  html[lang*="en"] .column-link--transparent[href="/public/local"] > i,
+  html[lang="pl"] .column-link--transparent[href="/public/local"] > i,
+  html[lang="ja"] .column-link--transparent[href="/public/local"] > i,
+  html[lang="hi"] .column-link--transparent[href="/public/local"] > i,
+  html[lang="ko"] .column-link--transparent[href="/public/local"] > i,
+  html[lang="es"] .column-link--transparent[href="/public/local"] > i,
+  html[lang="es-MX"] .column-link--transparent[href="/public/local"] > i,
+  html[lang="pt-PT"] .column-link--transparent[href="/public/local"] > i,
+  html[lang="es-AR"] .column-link--transparent[href="/public/local"] > i,
+  html[lang="de"] .column-link--transparent[href="/public/local"] > i,
+  html[lang*="fr"] .column-link--transparent[href="/public/local"] > i,
+  html[lang="pt-BR"] .column-link--transparent[href="/public/local"] > i,
+  html[lang="hu"] .column-link--transparent[href="/public/local"] > i {
+    display: none;
+  }
+  html[lang*="en"] .column-link--transparent[href="/public/local"] > span,
+  html[lang="pl"] .column-link--transparent[href="/public/local"] > span,
+  html[lang="ja"] .column-link--transparent[href="/public/local"] > span,
+  html[lang="hi"] .column-link--transparent[href="/public/local"] > span,
+  html[lang="ko"] .column-link--transparent[href="/public/local"] > span,
+  html[lang="es"] .column-link--transparent[href="/public/local"] > span,
+  html[lang="es-MX"] .column-link--transparent[href="/public/local"] > span,
+  html[lang="pt-PT"] .column-link--transparent[href="/public/local"] > span,
+  html[lang="es-AR"] .column-link--transparent[href="/public/local"] > span,
+  html[lang="de"] .column-link--transparent[href="/public/local"] > span,
+  html[lang*="fr"] .column-link--transparent[href="/public/local"] > span,
+  html[lang="pt-BR"] .column-link--transparent[href="/public/local"] > span,
+  html[lang="hu"] .column-link--transparent[href="/public/local"] > span {
+    display: none;
+    position: fixed;
+    content: 'Other feeds';
+    top: 0.95rem;
+    font-size: 0.8rem;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    transition: 0.2s;
+  }
+  html[lang*="en"] .column-link--transparent.active[href="/public/local"] > span,
+  html[lang="pl"] .column-link--transparent.active[href="/public/local"] > span,
+  html[lang="ja"] .column-link--transparent.active[href="/public/local"] > span,
+  html[lang="hi"] .column-link--transparent.active[href="/public/local"] > span,
+  html[lang="ko"] .column-link--transparent.active[href="/public/local"] > span,
+  html[lang="es"] .column-link--transparent.active[href="/public/local"] > span,
+  html[lang="es-MX"] .column-link--transparent.active[href="/public/local"] > span,
+  html[lang="pt-PT"] .column-link--transparent.active[href="/public/local"] > span,
+  html[lang="es-AR"] .column-link--transparent.active[href="/public/local"] > span,
+  html[lang="de"] .column-link--transparent.active[href="/public/local"] > span,
+  html[lang*="fr"] .column-link--transparent.active[href="/public/local"] > span,
+  html[lang="pt-BR"] .column-link--transparent.active[href="/public/local"] > span,
+  html[lang="hu"] .column-link--transparent.active[href="/public/local"] > span {
+    background: var(--item-hover);
+  }
+  html[lang*="en"] .column-link--transparent.active[href="/home"] > span,
+  html[lang="pl"] .column-link--transparent.active[href="/home"] > span,
+  html[lang="ja"] .column-link--transparent.active[href="/home"] > span,
+  html[lang="hi"] .column-link--transparent.active[href="/home"] > span,
+  html[lang="ko"] .column-link--transparent.active[href="/home"] > span,
+  html[lang="es"] .column-link--transparent.active[href="/home"] > span,
+  html[lang="es-MX"] .column-link--transparent.active[href="/home"] > span,
+  html[lang="pt-PT"] .column-link--transparent.active[href="/home"] > span,
+  html[lang="es-AR"] .column-link--transparent.active[href="/home"] > span,
+  html[lang="de"] .column-link--transparent.active[href="/home"] > span,
+  html[lang*="fr"] .column-link--transparent.active[href="/home"] > span,
+  html[lang="pt-BR"] .column-link--transparent.active[href="/home"] > span,
+  html[lang="hu"] .column-link--transparent.active[href="/home"] > span {
+    background: var(--item-hover);
+  }
+  html[lang*="en"] .column-link--transparent.active[href="/home"]::before,
+  html[lang="pl"] .column-link--transparent.active[href="/home"]::before,
+  html[lang="ja"] .column-link--transparent.active[href="/home"]::before,
+  html[lang="hi"] .column-link--transparent.active[href="/home"]::before,
+  html[lang="ko"] .column-link--transparent.active[href="/home"]::before,
+  html[lang="es"] .column-link--transparent.active[href="/home"]::before,
+  html[lang="es-MX"] .column-link--transparent.active[href="/home"]::before,
+  html[lang="pt-PT"] .column-link--transparent.active[href="/home"]::before,
+  html[lang="es-AR"] .column-link--transparent.active[href="/home"]::before,
+  html[lang="de"] .column-link--transparent.active[href="/home"]::before,
+  html[lang*="fr"] .column-link--transparent.active[href="/home"]::before,
+  html[lang="pt-BR"] .column-link--transparent.active[href="/home"]::before,
+  html[lang="hu"] .column-link--transparent.active[href="/home"]::before {
+    height: 1.4rem;
+    transition: 0.1s;
+  }
+  html[lang*="en"] .column-link--transparent[href="/home"] > span,
+  html[lang="pl"] .column-link--transparent[href="/home"] > span,
+  html[lang="ja"] .column-link--transparent[href="/home"] > span,
+  html[lang="hi"] .column-link--transparent[href="/home"] > span,
+  html[lang="ko"] .column-link--transparent[href="/home"] > span,
+  html[lang="es"] .column-link--transparent[href="/home"] > span,
+  html[lang="es-MX"] .column-link--transparent[href="/home"] > span,
+  html[lang="pt-PT"] .column-link--transparent[href="/home"] > span,
+  html[lang="es-AR"] .column-link--transparent[href="/home"] > span,
+  html[lang="de"] .column-link--transparent[href="/home"] > span,
+  html[lang*="fr"] .column-link--transparent[href="/home"] > span,
+  html[lang="pt-BR"] .column-link--transparent[href="/home"] > span,
+  html[lang="hu"] .column-link--transparent[href="/home"] > span {
+    display: none;
+    position: fixed;
+    top: 0.95rem;
+    left: 1rem;
+    font-size: 0.8rem;
+    padding: 6px 14px;
+    border-radius: 9999px;
+  }
+  html[lang*="en"] .column-link--transparent[href="/home"]::before,
+  html[lang="pl"] .column-link--transparent[href="/home"]::before,
+  html[lang="ja"] .column-link--transparent[href="/home"]::before,
+  html[lang="hi"] .column-link--transparent[href="/home"]::before,
+  html[lang="ko"] .column-link--transparent[href="/home"]::before,
+  html[lang="es"] .column-link--transparent[href="/home"]::before,
+  html[lang="es-MX"] .column-link--transparent[href="/home"]::before,
+  html[lang="pt-PT"] .column-link--transparent[href="/home"]::before,
+  html[lang="es-AR"] .column-link--transparent[href="/home"]::before,
+  html[lang="de"] .column-link--transparent[href="/home"]::before,
+  html[lang*="fr"] .column-link--transparent[href="/home"]::before,
+  html[lang="pt-BR"] .column-link--transparent[href="/home"]::before,
+  html[lang="hu"] .column-link--transparent[href="/home"]::before {
+    display: block;
+    position: fixed;
+    content: unset;
+    top: 0.8rem;
+    left: 0.9rem;
+    font-size: 0.8rem;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    background: var(--secondary-background);
+    height: 1.4rem;
+    transition: 0.1s;
+  }
+  html[lang*="en"] .column-link span,
+  html[lang="pl"] .column-link span,
+  html[lang="ja"] .column-link span,
+  html[lang="hi"] .column-link span,
+  html[lang="ko"] .column-link span,
+  html[lang="es"] .column-link span,
+  html[lang="es-MX"] .column-link span,
+  html[lang="pt-PT"] .column-link span,
+  html[lang="es-AR"] .column-link span,
+  html[lang="de"] .column-link span,
+  html[lang*="fr"] .column-link span,
+  html[lang="pt-BR"] .column-link span,
+  html[lang="hu"] .column-link span {
+    margin-left: 0 !important;
+  }
+  html[lang*="en"] .column-header__title .fa-home::before,
+  html[lang="pl"] .column-header__title .fa-home::before,
+  html[lang="ja"] .column-header__title .fa-home::before,
+  html[lang="hi"] .column-header__title .fa-home::before,
+  html[lang="ko"] .column-header__title .fa-home::before,
+  html[lang="es"] .column-header__title .fa-home::before,
+  html[lang="es-MX"] .column-header__title .fa-home::before,
+  html[lang="pt-PT"] .column-header__title .fa-home::before,
+  html[lang="es-AR"] .column-header__title .fa-home::before,
+  html[lang="de"] .column-header__title .fa-home::before,
+  html[lang*="fr"] .column-header__title .fa-home::before,
+  html[lang="pt-BR"] .column-header__title .fa-home::before,
+  html[lang="hu"] .column-header__title .fa-home::before {
+    visibility: hidden;
+  }
+  html[lang*="en"] .column-header__button,
+  html[lang="pl"] .column-header__button,
+  html[lang="ja"] .column-header__button,
+  html[lang="hi"] .column-header__button,
+  html[lang="ko"] .column-header__button,
+  html[lang="es"] .column-header__button,
+  html[lang="es-MX"] .column-header__button,
+  html[lang="pt-PT"] .column-header__button,
+  html[lang="es-AR"] .column-header__button,
+  html[lang="de"] .column-header__button,
+  html[lang*="fr"] .column-header__button,
+  html[lang="pt-BR"] .column-header__button,
+  html[lang="hu"] .column-header__button {
+    width: 45px;
+  }
+  html[lang*="en"] .column-link--transparent.active[href="/home"]::before {
+    width: 6.8rem;
+  }
+  html[lang*="en"] .column-link--transparent[href="/home"]::before {
+    width: 7.2rem;
+  }
+  html[lang*="en"] .column-link--transparent[href="/public/local"] span {
+    left: 4.3rem;
+  }
+  html[lang="pl"] .column-link--transparent.active[href="/home"]::before {
+    width: 11.1rem;
+  }
+  html[lang="pl"] .column-link--transparent[href="/home"]::before {
+    width: 12rem;
+  }
+  html[lang="pl"] .column-link--transparent[href="/public/local"] span {
+    left: 7.1rem;
+  }
+  html[lang="ja"] .column-link--transparent.active[href="/home"]::before {
+    width: 10.9rem;
+  }
+  html[lang="ja"] .column-link--transparent[href="/home"]::before {
+    width: 11.7rem;
+  }
+  html[lang="ja"] .column-link--transparent[href="/public/local"] span {
+    left: 4.5rem;
+  }
+  html[lang="hi"] .column-link--transparent.active[href="/home"]::before {
+    width: 5.5rem;
+  }
+  html[lang="hi"] .column-link--transparent[href="/home"]::before {
+    width: 5.8rem;
+  }
+  html[lang="hi"] .column-link--transparent[href="/public/local"] span {
+    left: 3.5rem;
+  }
+  html[lang="ko"] .column-link--transparent.active[href="/home"]::before {
+    width: 5.8rem;
+  }
+  html[lang="ko"] .column-link--transparent[href="/home"]::before {
+    width: 6.1rem;
+  }
+  html[lang="ko"] .column-link--transparent[href="/public/local"] span {
+    left: 3rem;
+  }
+  html[lang="es"] .column-link--transparent.active[href="/home"]::before,
+  html[lang="es-MX"] .column-link--transparent.active[href="/home"]::before,
+  html[lang="pt-PT"] .column-link--transparent.active[href="/home"]::before {
+    width: 7.3rem;
+  }
+  html[lang="es"] .column-link--transparent[href="/home"]::before,
+  html[lang="es-MX"] .column-link--transparent[href="/home"]::before,
+  html[lang="pt-PT"] .column-link--transparent[href="/home"]::before {
+    width: 7.8rem;
+  }
+  html[lang="es"] .column-link--transparent[href="/public/local"] span,
+  html[lang="es-MX"] .column-link--transparent[href="/public/local"] span,
+  html[lang="pt-PT"] .column-link--transparent[href="/public/local"] span {
+    left: 4.2rem;
+  }
+  html[lang="es-AR"] .column-link--transparent.active[href="/home"]::before {
+    width: 13.2rem;
+  }
+  html[lang="es-AR"] .column-link--transparent[href="/home"]::before {
+    width: 13.9rem;
+  }
+  html[lang="es-AR"] .column-link--transparent[href="/public/local"] span {
+    left: 5.3rem;
+  }
+  html[lang="de"] .column-link--transparent.active[href="/home"]::before {
+    width: 8.5rem;
+  }
+  html[lang="de"] .column-link--transparent[href="/home"]::before {
+    width: 9rem;
+  }
+  html[lang="de"] .column-link--transparent[href="/public/local"] span {
+    left: 5.8rem;
+  }
+  html[lang*="fr"] .column-link--transparent.active[href="/home"]::before {
+    width: 8.5rem;
+  }
+  html[lang*="fr"] .column-link--transparent[href="/home"]::before {
+    width: 8.9rem;
+  }
+  html[lang*="fr"] .column-link--transparent[href="/public/local"] span {
+    left: 4.8rem;
+  }
+  html[lang="pt-BR"] .column-link--transparent.active[href="/home"]::before {
+    width: 10.6rem;
+  }
+  html[lang="pt-BR"] .column-link--transparent[href="/home"]::before {
+    width: 11.1rem;
+  }
+  html[lang="pt-BR"] .column-link--transparent[href="/public/local"] span {
+    left: 7rem;
+  }
+  html[lang="hu"] .column-link--transparent.active[href="/home"]::before {
+    width: 9.4rem;
+  }
+  html[lang="hu"] .column-link--transparent[href="/home"]::before {
+    width: 9.9rem;
+  }
+  html[lang="hu"] .column-link--transparent[href="/public/local"] span {
+    left: 6.2rem;
+  }
+}
 @media screen and (max-width: 889px) {
+  .column-link[href="/lists"] {
+    display: none !important;
+    position: fixed;
+    top: 0.8rem;
+    right: 3.8rem;
+    opacity: 0.5;
+    margin-right: 15px;
+    background: var(--secondary-background);
+    border-radius: 50%;
+    width: 35px !important;
+    height: 35px;
+    flex: unset;
+    justify-content: center;
+    align-items: center;
+  }
+  .column-link[href="/lists"] .fa-list-ul {
+    width: 18px !important;
+    height: 18px !important;
+    margin-inline-end: 0;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNDhweCIgdmlld0JveD0iMCAtOTYwIDk2MCA5NjAiIHdpZHRoPSI0OHB4IiBmaWxsPSIjRkZGRkZGIj48cGF0aCBkPSJNMzAwLTI4Ny4ycTEyIDAgMjEtOC44OHQ5LTIxLjEycTAtMTItOS0yMXQtMjEtOXEtMTIgMC0yMSA5dC05IDIxcTAgMTIuMjQgOSAyMS4xMnQyMSA4Ljg4Wm0wLTE2Mi44cTEyIDAgMjEtOXQ5LTIxcTAtMTItOS0yMXQtMjEtOXEtMTIgMC0yMSA5dC05IDIxcTAgMTIgOSAyMXQyMSA5Wm0wLTE2My4wNHExMiAwIDIxLTguODh0OS0yMS4xMnEwLTEyLTktMjF0LTIxLTlxLTEyIDAtMjEgOXQtOSAyMXEwIDEyLjI0IDkgMjEuMTJ0MjEgOC44OFpNNDMyLTI4Ny4yaDI0NHYtNjBINDMydjYwWm0wLTE2Mi44aDI0NHYtNjBINDMydjYwWm0wLTE2My4wNGgyNDR2LTYwSDQzMnY2MFpNMTgyLjE1LTExNC4wMnEtMjcuNiAwLTQ3Ljg2LTIwLjI3LTIwLjI3LTIwLjI2LTIwLjI3LTQ3Ljg2di01OTUuN3EwLTI3LjcgMjAuMjctNDguMDMgMjAuMjYtMjAuMzQgNDcuODYtMjAuMzRoNTk1LjdxMjcuNyAwIDQ4LjAzIDIwLjM0IDIwLjM0IDIwLjMzIDIwLjM0IDQ4LjAzdjU5NS43cTAgMjcuNi0yMC4zNCA0Ny44Ni0yMC4zMyAyMC4yNy00OC4wMyAyMC4yN2gtNTk1LjdabTAtNjguMTNoNTk1Ljd2LTU5NS43aC01OTUuN3Y1OTUuN1ptMC01OTUuN3Y1OTUuNy01OTUuN1oiLz48L3N2Zz4=");
+  }
+  .ui:has(.column-link.active:is([href="/public/local"],
+  [href="/home"])) .column-link[href="/lists"] {
+    display: grid !important;
+  }
+  .ui:has(.column-link.active:is([href="/public/local"],
+  [href="/home"])) .column-header__buttons {
+    padding-right: 6rem;
+  }
+  .ui__header__links > a[href="/publish"] ~ a:last-child {
+    display: block;
+  }
+  .column-link[href="/bookmarks"],
+  .column-link[href="/favourites"],
+  .column-link[href="/settings/preferences"],
+  .navigation-panel__legal {
+    display: none !important;
+  }
+  .ui:not(:has(.account__header__account-note)):has(.account__header) .ui__header__links > a[href="/publish"] ~ a:last-child {
+    display: none;
+  }
+  .ui:not(:has(.account__header__account-note)):has(.account__header) .column-link[href="/bookmarks"] {
+    display: grid !important;
+    position: fixed;
+    top: 0.8rem;
+    right: 1rem;
+    opacity: 0.5;
+    margin-right: 0px;
+    background: var(--secondary-background);
+    border-radius: 50%;
+    width: 35px !important;
+    height: 35px;
+    flex: unset;
+    justify-content: center;
+    align-items: center;
+  }
+  .ui:not(:has(.account__header__account-note)):has(.account__header) .column-link[href="/bookmarks"] .fa-bookmark {
+    width: 18px !important;
+    height: 18px !important;
+    margin-inline-end: 0;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNDhweCIgdmlld0JveD0iMCAtOTYwIDk2MCA5NjAiIHdpZHRoPSI0OHB4IiBmaWxsPSIjRkZGRkZGIj48cGF0aCBkPSJNMTExLjE1LTM0LjVWLTcyOXEwLTI3LjcgMjAuMzQtNDguMDMgMjAuMzMtMjAuMzQgNDguMDMtMjAuMzRoNDcyLjgzcTI3LjYgMCA0OC4zNiAyMC4zNCAyMC43NyAyMC4zMyAyMC43NyA0OC4wM3Y2OTQuNUw0MTUuOTMtMTYzLjg5IDExMS4xNS0zNC41Wm02OC4zNy0xMDMuNDMgMjM2LjQxLTEwMS44MSAyMzYuNDIgMTAxLjgxVi03MjlIMTc5LjUydjU5MS4wN1ptNjAwLjk2IDIuNDN2LTcyMS44N0gyNDEuODV2LTY4LjEzaDUzOC42M3EyNy43IDAgNDguMDMgMjAuMjcgMjAuMzQgMjAuMjYgMjAuMzQgNDcuODZ2NzIxLjg3aC02OC4zN1pNMTc5LjUyLTcyOWg0NzIuODMtNDcyLjgzWiIvPjwvc3ZnPg==");
+  }
+  .ui:not(:has(.account__header__account-note)):has(.account__header) .column-link[href="/favourites"] {
+    display: grid !important;
+    position: fixed;
+    top: 0.8rem;
+    right: 3.8rem;
+    opacity: 0.5;
+    margin-right: 0px;
+    background: var(--secondary-background);
+    border-radius: 50%;
+    width: 35px !important;
+    height: 35px;
+    flex: unset;
+    justify-content: center;
+    align-items: center;
+  }
+  .ui:not(:has(.account__header__account-note)):has(.account__header) .column-link[href="/favourites"] .fa-star {
+    width: 18px !important;
+    height: 18px !important;
+    margin-inline-end: 0;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNDhweCIgdmlld0JveD0iMCAtOTYwIDk2MCA5NjAiIHdpZHRoPSI0OHB4IiBmaWxsPSIjRkZGRkZGIj48cGF0aCBkPSJtNDc5Ljc2LTExMi44Ny00NS4wNi00MC41OXEtMTA2LjQ5LTk3LjgzLTE3NS45Ni0xNjguNzUtNjkuNDgtNzAuOTItMTEwLjcyLTEyNi45LTQxLjI0LTU1Ljk4LTU3Ljc0LTEwMS41Ny0xNi41LTQ1LjYtMTYuNS05Mi4zNCAwLTkyLjggNjIuMjEtMTU1IDYyLjIyLTYyLjIgMTUzLjc3LTYyLjIgNTYuODMgMCAxMDUuMTggMjYuMjkgNDguMzQgMjYuMjggODQuODIgNzYuMzIgNDIuNDgtNTMuMDQgODkuMjUtNzcuODIgNDYuNzctMjQuNzkgMTAwLjc1LTI0Ljc5IDkxLjk2IDAgMTU0LjIxIDYyLjIxIDYyLjI1IDYyLjIgNjIuMjUgMTU1LjAxIDAgNDYuNzEtMTYuNSA5Mi4xOXQtNTcuNzQgMTAxLjQ2cS00MS4yNCA1NS45OC0xMTAuOCAxMjcuMDQtNjkuNTcgNzEuMDctMTc2LjExIDE2OC44NWwtNDUuMzEgNDAuNTlabS0uMTItODkuNzZxMTAxLjEyLTkzIDE2Ni4yNi0xNTkuMTQgNjUuMTQtNjYuMTQgMTAzLjQtMTE1Ljc4IDM4LjI3LTQ5LjY1IDUzLjUzLTg4LjQ2IDE1LjI2LTM4LjgxIDE1LjI2LTc2Ljg0IDAtNjUuMTktNDEuNDktMTA3LjIyLTQxLjQ5LTQyLjAyLTEwNi41LTQyLjAyLTUwLjkyIDAtOTQuNDEgMzEuNjItNDMuNDkgMzEuNjItNzAuNDkgODguMzhoLTUxLjYzcS0yNS45NC01Ni02OS42NC04OC00My42OS0zMi05NC4zNS0zMi02NC42OSAwLTEwNi4wNiA0MS44Ny00MS4zNyA0MS44Ny00MS4zNyAxMDcuNTQgMCAzOC40NiAxNS4zNyA3Ny43NCAxNS4zNiAzOS4yOCA1My42NCA4OS4zOSAzOC4yNyA1MC4xMiAxMDMuNjggMTE1Ljc2IDY1LjQgNjUuNjQgMTY0LjggMTU3LjE2Wm0uNi0yOTQuODVaIi8+PC9zdmc+");
+  }
   .column-header__buttons .column-header__button:has(.fa-eye),
   .column-header__buttons .column-header__button:has(.fa-eye-slash) {
     margin-right: 0px !important;
@@ -1751,12 +2253,20 @@ body.app-body.layout-single-column,
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 1rem;
+    gap: 0;
     box-shadow: rgba(104,100,111,0.161) 0px 0px 8px 6px;
+    padding: 0;
   }
   .ui__header__links > a[href="/publish"]:after {
     font-size: 24px;
     font-weight: normal;
-    content: '+';
+    content: '';
+    height: 24px;
+    width: 24px;
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiIGZpbGw9IiNGRkYiPjxwYXRoIGQ9Ik0yMDAtMTIwcS0zMyAwLTU2LjUtMjMuNVQxMjAtMjAwdi01NjBxMC0zMyAyMy41LTU2LjVUMjAwLTg0MGgyNjFxMjAgMCAzMCAxMi41dDEwIDI3LjUtMTAuNSAyNy41VDQ2MC03NjBIMjAwdjU2MGg1NjB2LTI2MXEwLTIwIDEyLjUtMzB0MjcuNS0xMCAyNy41IDEwIDEyLjUgMzB2MjYxcTAgMzMtMjMuNSA1Ni41VDc2MC0xMjB6bTE2MC0yODB2LTk3cTAtMTYgNi0zMC41dDE3LTI1LjVsMzQ0LTM0NHExMi0xMiAyNy0xOHQzMC02cTE2IDAgMzAuNSA2dDI2LjUgMThsNTYgNTdxMTEgMTIgMTcgMjYuNXQ2IDI5LjUtNS41IDI5LjVUODk3LTcyOEw1NTMtMzg0cS0xMSAxMS0yNS41IDE3LjVUNDk3LTM2MGgtOTdxLTE3IDAtMjguNS0xMS41VDM2MC00MDBtNDgxLTM4NC01Ni01NnpNNDQwLTQ0MGg1NmwyMzItMjMyLTI4LTI4LTI5LTI4LTIzMSAyMzF6bTI2MC0yNjAtMjktMjh6bDI4IDI4eiIvPjwvc3ZnPg==");
+    background-size: contain;
+    background-repeat: no-repeat;
     text-indent: 0;
     display: block;
     line-height: initial;
@@ -1925,5 +2435,5 @@ body.app-body.layout-single-column,
 }
 }
 .link-footer p:first-child::after {
-  content: " · Pebble theme for Mastodon v1.3.2.2 by @blobcat@pebble.social";
+  content: " · Pebble theme for Mastodon v1.4 by @blobcat@pebble.social";
 }
