@@ -316,7 +316,7 @@
 		.column > .scrollable {
 			border: 0 !important;
 		}
-		.icon-button.star-icon.active, .notification__favourite-icon-wrapper .star-icon, .link-button {
+		.account__domain-pill__popout__parts__icon, .icon-button.star-icon.active, .notification__favourite-icon-wrapper .star-icon, .link-button {
 			color: #6A44DD;
 		}
 		.conversation--unread {
@@ -443,7 +443,8 @@
 		.notification__filter-bar a.active::before,
 		.notification__filter-bar button.active::before,
 		.inline-follow-suggestions__body__scroll-button__icon,
-		.inline-follow-suggestions__body__scroll-button:active .inline-follow-suggestions__body__scroll-button__icon, .inline-follow-suggestions__body__scroll-button:focus .inline-follow-suggestions__body__scroll-button__icon, .inline-follow-suggestions__body__scroll-button:hover .inline-follow-suggestions__body__scroll-button__icon {
+		.inline-follow-suggestions__body__scroll-button:active .inline-follow-suggestions__body__scroll-button__icon, .inline-follow-suggestions__body__scroll-button:focus .inline-follow-suggestions__body__scroll-button__icon, .inline-follow-suggestions__body__scroll-button:hover .inline-follow-suggestions__body__scroll-button__icon,
+		.account__domain-pill__popout__header__icon, .account__domain-pill.active {
 			background: #6A44DD;
 		}
 		.hashtag-bar {
@@ -819,7 +820,7 @@
 			background-repeat: no-repeat;
 			background-position: center;
 		}
-		.spoiler-button, .status__prepend, .status, .detailed-status, .verified__mark {
+		.spoiler-button, .status__prepend, .status, .detailed-status, .verified__mark, .verified {
 			svg:not(.icon-ellipsis-h):not(.icon-close) path {
 				visibility: hidden;
 			}
@@ -1065,7 +1066,8 @@
 		}
 		.privacy-dropdown.active .privacy-dropdown__value,
 		.privacy-dropdown__dropdown,
-		.language-dropdown__dropdown {
+		.language-dropdown__dropdown,
+		.account__domain-pill__popout {
 			background: var(--background);
 			border: 1px solid var(--border-color);
 		}
@@ -1121,6 +1123,7 @@
 		.account__header__bar .account__header__bio .account__header__fields {
 			border: 0;
 			background: transparent;
+			gap: 3px;
 			dl {
 				display: inline;
 				border: 0;
@@ -1517,10 +1520,13 @@
 		}
 	}
 	@media screen and (max-width: 889px) {
+		.columns-area__panels__pane--navigational .navigation-panel {
+			border-inline-start: 0;
+		}
 		.detailed-status__button button:has(.icon-reply):after {
 			position: fixed;
 			content: "Reply to this post...";
-			bottom: 0.7em;
+			bottom: 4.5em;
 			z-index: 2;
 			width: 95%;
 			left: 0;
@@ -1533,8 +1539,17 @@
 			box-sizing: border-box;
 		}
 		.ui:has(.detailed-status) {
-			.navigation-panel .navigation-panel__legal, .navigation-panel .column-link, .ui__header__links > a[href="/publish"] {
+			.ui__header__links > a[href="/publish"], .ui__header__links > a:last-child:not([href="/auth/sign_in"]) {
 				display: none !important;
+			}
+		}
+		.ui:has(.detailed-status) .columns-area__panels__pane__inner {
+			padding-top: 3rem;
+		}
+		.tabs-bar__wrapper {
+			z-index: 99;
+			.column-header__back-button {
+				padding: 13px;
 			}
 		}
 		.columns-area--mobile .scrollable, .scrollable {
@@ -2126,11 +2141,6 @@
 		.columns-area--mobile .scrollable, .scrollable {
 			contain: unset;
 		}
-		.ui:has(.detailed-status) {
-			.navigation-panel .navigation-panel__legal, .navigation-panel .column-link, .ui__header__links > a[href="/publish"], .ui__header__links > a:last-child:not([href="/auth/sign_in"]) {
-				display: none !important;
-			}
-		}
 		html[lang*="en"], html[lang="pl"], html[lang="ja"], html[lang="hi"], html[lang="ko"], html[lang="es"], html[lang="es-MX"], html[lang="pt-PT"], html[lang="es-AR"], html[lang="de"], html[lang*="fr"], html[lang="pt-BR"], html[lang="hu"] {
 			.navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/home"] span {
 				display: block;
@@ -2719,6 +2729,31 @@
 			display: none;
 		}
 	}
+	.container-alt {
+		.logo-container a {
+			background-image: var(--logo);
+			background-repeat: no-repeat;
+			background-position: center;
+			svg {
+				visibility: hidden;
+			}
+		}
+		.button, button {
+			border-radius: 999px;
+			background: #6a44dd;
+			color: white !important;
+			padding: 7px 18px !important;
+			border: 0;
+		}
+		.rules-list li:before, .progress-tracker .separator.completed, .progress-tracker .active .circle:before, .progress-tracker .completed .circle {
+			background: #6a44dd;
+			color: white;
+			border-color: #6a44dd;
+		}
+		.progress-tracker .active .circle {
+			border-color: #6a44dd;
+		}
+	}
 	.link-footer p:first-child::after {
-		content: " · Pebble theme for Mastodon 4.3.0 commit4 by @blobcat@pebble.social";
+		content: " · Pebble theme for Mastodon 4.3.0 commit5 by @blobcat@pebble.social";
 	}

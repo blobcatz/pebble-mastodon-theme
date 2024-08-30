@@ -352,6 +352,7 @@ body.app-body.layout-single-column,
 .layout-single-column .column > .scrollable {
   border: 0 !important;
 }
+.layout-single-column .account__domain-pill__popout__parts__icon,
 .layout-single-column .icon-button.star-icon.active,
 .layout-single-column .notification__favourite-icon-wrapper .star-icon,
 .layout-single-column .link-button {
@@ -478,7 +479,9 @@ body.app-body.layout-single-column,
 .layout-single-column .inline-follow-suggestions__body__scroll-button__icon,
 .layout-single-column .inline-follow-suggestions__body__scroll-button:active .inline-follow-suggestions__body__scroll-button__icon,
 .layout-single-column .inline-follow-suggestions__body__scroll-button:focus .inline-follow-suggestions__body__scroll-button__icon,
-.layout-single-column .inline-follow-suggestions__body__scroll-button:hover .inline-follow-suggestions__body__scroll-button__icon {
+.layout-single-column .inline-follow-suggestions__body__scroll-button:hover .inline-follow-suggestions__body__scroll-button__icon,
+.layout-single-column .account__domain-pill__popout__header__icon,
+.layout-single-column .account__domain-pill.active {
   background: #6a44dd;
 }
 .layout-single-column .hashtag-bar {
@@ -810,7 +813,8 @@ body.app-body.layout-single-column,
 .layout-single-column .status__prepend svg:not(.icon-ellipsis-h):not(.icon-close) path,
 .layout-single-column .status svg:not(.icon-ellipsis-h):not(.icon-close) path,
 .layout-single-column .detailed-status svg:not(.icon-ellipsis-h):not(.icon-close) path,
-.layout-single-column .verified__mark svg:not(.icon-ellipsis-h):not(.icon-close) path {
+.layout-single-column .verified__mark svg:not(.icon-ellipsis-h):not(.icon-close) path,
+.layout-single-column .verified svg:not(.icon-ellipsis-h):not(.icon-close) path {
   visibility: hidden;
 }
 .layout-single-column .detailed-status {
@@ -1068,7 +1072,8 @@ body.app-body.layout-single-column,
 }
 .layout-single-column .privacy-dropdown.active .privacy-dropdown__value,
 .layout-single-column .privacy-dropdown__dropdown,
-.layout-single-column .language-dropdown__dropdown {
+.layout-single-column .language-dropdown__dropdown,
+.layout-single-column .account__domain-pill__popout {
   background: var(--background);
   border: 1px solid var(--border-color);
 }
@@ -1126,6 +1131,7 @@ body.app-body.layout-single-column,
 .layout-single-column .account__header__bar .account__header__bio .account__header__fields {
   border: 0;
   background: transparent;
+  gap: 3px;
 }
 .layout-single-column .account__header__bar .account__header__bio .account__header__fields dl {
   display: inline;
@@ -1900,10 +1906,13 @@ body.app-body.layout-single-column,
   }
 }
 @media screen and (max-width: 889px) {
+  .columns-area__panels__pane--navigational .navigation-panel {
+    border-inline-start: 0;
+  }
   .detailed-status__button button:has(.icon-reply):after {
     position: fixed;
     content: "Reply to this post...";
-    bottom: 0.7em;
+    bottom: 4.5em;
     z-index: 2;
     width: 95%;
     left: 0;
@@ -1915,10 +1924,18 @@ body.app-body.layout-single-column,
     border-radius: 100px;
     box-sizing: border-box;
   }
-  .ui:has(.detailed-status) .navigation-panel .navigation-panel__legal,
-  .ui:has(.detailed-status) .navigation-panel .column-link,
-  .ui:has(.detailed-status) .ui__header__links > a[href="/publish"] {
+  .ui:has(.detailed-status) .ui__header__links > a[href="/publish"],
+  .ui:has(.detailed-status) .ui__header__links > a:last-child:not([href="/auth/sign_in"]) {
     display: none !important;
+  }
+  .ui:has(.detailed-status) .columns-area__panels__pane__inner {
+    padding-top: 3rem;
+  }
+  .tabs-bar__wrapper {
+    z-index: 99;
+  }
+  .tabs-bar__wrapper .column-header__back-button {
+    padding: 13px;
   }
   .columns-area--mobile .scrollable,
   .scrollable {
@@ -2537,12 +2554,6 @@ body.app-body.layout-single-column,
   .columns-area--mobile .scrollable,
   .scrollable {
     contain: unset;
-  }
-  .ui:has(.detailed-status) .navigation-panel .navigation-panel__legal,
-  .ui:has(.detailed-status) .navigation-panel .column-link,
-  .ui:has(.detailed-status) .ui__header__links > a[href="/publish"],
-  .ui:has(.detailed-status) .ui__header__links > a:last-child:not([href="/auth/sign_in"]) {
-    display: none !important;
   }
   html[lang*="en"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/home"] span,
   html[lang="pl"] .navigation-panel:has(.column-link.active[href="/home"]) .column-link--transparent[href="/home"] span,
@@ -3339,6 +3350,33 @@ body.app-body.layout-single-column,
     }
 }
 }
+.container-alt .logo-container a {
+  background-image: var(--logo);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.container-alt .logo-container a svg {
+  visibility: hidden;
+}
+.container-alt .button,
+.container-alt button {
+  border-radius: 999px;
+  background: #6a44dd;
+  color: #fff !important;
+  padding: 7px 18px !important;
+  border: 0;
+}
+.container-alt .rules-list li:before,
+.container-alt .progress-tracker .separator.completed,
+.container-alt .progress-tracker .active .circle:before,
+.container-alt .progress-tracker .completed .circle {
+  background: #6a44dd;
+  color: #fff;
+  border-color: #6a44dd;
+}
+.container-alt .progress-tracker .active .circle {
+  border-color: #6a44dd;
+}
 .link-footer p:first-child::after {
-  content: " · Pebble theme for Mastodon 4.3.0 commit4 by @blobcat@pebble.social";
+  content: " · Pebble theme for Mastodon 4.3.0 commit5 by @blobcat@pebble.social";
 }
