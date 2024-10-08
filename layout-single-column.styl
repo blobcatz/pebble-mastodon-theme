@@ -1,4 +1,4 @@
-	@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 	@media (prefers-color-scheme: dark) {
 		.theme-system {
 			--background: #0F0F0F;
@@ -27,6 +27,12 @@
 			}
 			.account__header__fields .verified, .verified-badge {
 				background: hsla(262, 100%, 25%, .471);
+			}
+			.search__input {
+				color: #9baec8;
+				&::placeholder {
+					color: #9baec8;
+				}
 			}
 		}
 	}
@@ -58,6 +64,12 @@
 		}
 		.account__header__fields .verified, .verified-badge {
 			background: hsla(262, 100%, 25%, .471);
+		}
+		.search__input {
+			color: #9baec8;
+			&::placeholder {
+				color: #9baec8;
+			}
 		}
 	}
 	.theme-contrast {
@@ -442,8 +454,12 @@
 		.notification__filter-bar button.active::before,
 		.inline-follow-suggestions__body__scroll-button__icon,
 		.inline-follow-suggestions__body__scroll-button:active .inline-follow-suggestions__body__scroll-button__icon, .inline-follow-suggestions__body__scroll-button:focus .inline-follow-suggestions__body__scroll-button__icon, .inline-follow-suggestions__body__scroll-button:hover .inline-follow-suggestions__body__scroll-button__icon,
-		.account__domain-pill__popout__header__icon, .account__domain-pill.active {
+		.account__domain-pill__popout__header__icon, .account__domain-pill.active, .poll__chart.leading {
 			background: #6A44DD;
+		}
+		.button.button-secondary.button--destructive:active, .button.button-secondary.button--destructive:focus, .button.button-secondary.button--destructive:hover {
+			background: #b7253d;
+			color: white;
 		}
 		.hashtag-bar {
 			margin-top: 10px;
@@ -947,11 +963,15 @@
 				border-color: var(--item-hover);
 			}
 		}
-		.dropdown-menu__separator {
+		.dropdown-menu__separator, , .account__section-headline, .notification__filter-bar, .navigation-panel hr, .getting-started__trends h4, .status, .inline-follow-suggestions, .inline-follow-suggestions__body__scrollable__card, .account__header__tabs__buttons .icon-button, .notification-ungrouped, .load-gap, .notification-group, .explore__suggestions__card, .trends__item, .story, .follow_requests-unlocked_explanation, .conversation, .timeline-hint--with-descendants, .dialog-modal__header, .hashtag-header {
 			border-color: var(--item-hover);
 		}
 		.scrollable .account-card__bio::after {
 			display: none;
+		}
+		.column-header__back-button+.column-header__title {
+			padding: 13px;
+			padding-top: 0;
 		}
 		.column-inline-form, .search__popout {
 			border-radius: 4px;
@@ -1033,13 +1053,20 @@
 		.confirmation-modal,
 		.mute-modal,
 		.report-modal,
-		.drawer__inner {
+		.drawer__inner, .interaction-modal, .safety-action-modal, .dialog-modal, .report-dialog-modal {
 			background: var(--background);
 			color: var(--text-color);
 			border: 1px solid var(--item-hover);
+			border-radius: 4px;
 		}
-		.report-modal__target {
-			border-bottom: 1px solid var(--item-hover);
+		.safety-action-modal__top, .safety-action-modal__bottom {
+			background: none;
+			-webkit-backdrop-filter: none;
+			backdrop-filter: none;
+			border: 0;
+		}
+		.report-dialog-modal__container {
+			border-color: var(--item-hover);
 		}
 		.focal-point-modal__content {
 			padding: 5px 3px;
@@ -1836,6 +1863,9 @@
 		.check-box__input.checked, .check-box__input.indeterminate, .radio-button__input.checked, .radio-button__input.indeterminate {
 			border-color: #6a44dd;
 		}
+		.check-box__input.checked, .safety-action-modal__header__icon {
+			background: #6a44dd;
+		}
 	}
 	.admin-wrapper {
 		background: var(--background);
@@ -2067,7 +2097,7 @@
 					display: flex;
 					border-radius: 1rem;
 					box-sizing: border-box;
-					box-shadow: rgba(104,100,111,0.161) 0px 0px 8px 6px;
+					box-shadow: rgba(104, 100, 111, 0.161) 0px 0px 8px 6px;
 					background-color: #6a44dd;
 					background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2224%22%20viewBox%3D%220%20-960%20960%20960%22%20width%3D%2224%22%20fill%3D%22%23fff%22%3E%3Cpath%20d%3D%22m240-240-92%2092q-19%2019-43.5%208.5T80-177v-623q0-33%2023.5-56.5T160-880h640q33%200%2056.5%2023.5T880-800v480q0%2033-23.5%2056.5T800-240zm-34-80h594v-480H160v525zm-46%200v-480z%22%2F%3E%3C%2Fsvg%3E");
 					background-size: 24px;
@@ -2446,7 +2476,7 @@
 			border: 1px solid var(--item-hover);
 			border-radius: 4px;
 		}
-		.detailed-status__meta__line, .search-results__section__header, .account__section-headline, .notification__filter-bar, .navigation-panel hr, .getting-started__trends h4, .status, .inline-follow-suggestions, .inline-follow-suggestions__body__scrollable__card, .account__header__tabs__buttons .icon-button, .notification-ungrouped, .load-gap, .notification-group, .explore__suggestions__card, .trends__item, .story {
+		.detailed-status__meta__line, .search-results__section__header {
 			border-color: var(--item-hover);
 		}
 		.getting-started__trends {

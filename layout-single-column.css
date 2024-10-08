@@ -34,6 +34,12 @@
   .theme-system .verified-badge {
     background: rgba(47,0,128,0.471);
   }
+  .theme-system .search__input {
+    color: #9baec8;
+  }
+  .theme-system .search__input::placeholder {
+    color: #9baec8;
+  }
 }
 .theme-default,
 .theme-contrast {
@@ -78,6 +84,14 @@
 .theme-default .verified-badge,
 .theme-contrast .verified-badge {
   background: rgba(47,0,128,0.471);
+}
+.theme-default .search__input,
+.theme-contrast .search__input {
+  color: #9baec8;
+}
+.theme-default .search__input::placeholder,
+.theme-contrast .search__input::placeholder {
+  color: #9baec8;
 }
 .theme-contrast .compose-form .autosuggest-textarea__textarea::placeholder,
 .theme-contrast .compose-form .spoiler-input__input::placeholder {
@@ -477,8 +491,15 @@ body.app-body.layout-single-column,
 .layout-single-column .inline-follow-suggestions__body__scroll-button:focus .inline-follow-suggestions__body__scroll-button__icon,
 .layout-single-column .inline-follow-suggestions__body__scroll-button:hover .inline-follow-suggestions__body__scroll-button__icon,
 .layout-single-column .account__domain-pill__popout__header__icon,
-.layout-single-column .account__domain-pill.active {
+.layout-single-column .account__domain-pill.active,
+.layout-single-column .poll__chart.leading {
   background: #6a44dd;
+}
+.layout-single-column .button.button-secondary.button--destructive:active,
+.layout-single-column .button.button-secondary.button--destructive:focus,
+.layout-single-column .button.button-secondary.button--destructive:hover {
+  background: #b7253d;
+  color: #fff;
 }
 .layout-single-column .hashtag-bar {
   margin-top: 10px;
@@ -955,11 +976,34 @@ body.app-body.layout-single-column,
 .layout-single-column .dropdown-menu .dropdown-menu__separator {
   border-color: var(--item-hover);
 }
-.layout-single-column .dropdown-menu__separator {
+.layout-single-column .dropdown-menu__separator,
+.layout-single-column .account__section-headline,
+.layout-single-column .notification__filter-bar,
+.layout-single-column .navigation-panel hr,
+.layout-single-column .getting-started__trends h4,
+.layout-single-column .status,
+.layout-single-column .inline-follow-suggestions,
+.layout-single-column .inline-follow-suggestions__body__scrollable__card,
+.layout-single-column .account__header__tabs__buttons .icon-button,
+.layout-single-column .notification-ungrouped,
+.layout-single-column .load-gap,
+.layout-single-column .notification-group,
+.layout-single-column .explore__suggestions__card,
+.layout-single-column .trends__item,
+.layout-single-column .story,
+.layout-single-column .follow_requests-unlocked_explanation,
+.layout-single-column .conversation,
+.layout-single-column .timeline-hint--with-descendants,
+.layout-single-column .dialog-modal__header,
+.layout-single-column .hashtag-header {
   border-color: var(--item-hover);
 }
 .layout-single-column .scrollable .account-card__bio::after {
   display: none;
+}
+.layout-single-column .column-header__back-button+.column-header__title {
+  padding: 13px;
+  padding-top: 0;
 }
 .layout-single-column .column-inline-form,
 .layout-single-column .search__popout {
@@ -1042,13 +1086,25 @@ body.app-body.layout-single-column,
 .layout-single-column .confirmation-modal,
 .layout-single-column .mute-modal,
 .layout-single-column .report-modal,
-.layout-single-column .drawer__inner {
+.layout-single-column .drawer__inner,
+.layout-single-column .interaction-modal,
+.layout-single-column .safety-action-modal,
+.layout-single-column .dialog-modal,
+.layout-single-column .report-dialog-modal {
   background: var(--background);
   color: var(--text-color);
   border: 1px solid var(--item-hover);
+  border-radius: 4px;
 }
-.layout-single-column .report-modal__target {
-  border-bottom: 1px solid var(--item-hover);
+.layout-single-column .safety-action-modal__top,
+.layout-single-column .safety-action-modal__bottom {
+  background: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border: 0;
+}
+.layout-single-column .report-dialog-modal__container {
+  border-color: var(--item-hover);
 }
 .layout-single-column .focal-point-modal__content {
   padding: 5px 3px;
@@ -1779,6 +1835,10 @@ body.app-body.layout-single-column,
 .layout-single-column .radio-button__input.checked,
 .layout-single-column .radio-button__input.indeterminate {
   border-color: #6a44dd;
+}
+.layout-single-column .check-box__input.checked,
+.layout-single-column .safety-action-modal__header__icon {
+  background: #6a44dd;
 }
 @-moz-keyframes click-like {
   0% {
@@ -2846,21 +2906,7 @@ body.app-body.layout-single-column,
     border-radius: 4px;
   }
   .detailed-status__meta__line,
-  .search-results__section__header,
-  .account__section-headline,
-  .notification__filter-bar,
-  .navigation-panel hr,
-  .getting-started__trends h4,
-  .status,
-  .inline-follow-suggestions,
-  .inline-follow-suggestions__body__scrollable__card,
-  .account__header__tabs__buttons .icon-button,
-  .notification-ungrouped,
-  .load-gap,
-  .notification-group,
-  .explore__suggestions__card,
-  .trends__item,
-  .story {
+  .search-results__section__header {
     border-color: var(--item-hover);
   }
   .getting-started__trends {
