@@ -334,7 +334,7 @@
 }
 body {
   background: var(--background);
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
 }
 body.app-body.layout-single-column,
 .layout-single-column .app-holder,
