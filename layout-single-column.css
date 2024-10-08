@@ -334,7 +334,7 @@
 }
 body {
   background: var(--background);
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", "mastodon-font-sans-serif", sans-serif;
 }
 body.app-body.layout-single-column,
 .layout-single-column .app-holder,
@@ -841,6 +841,10 @@ body.app-body.layout-single-column,
 }
 .layout-single-column .column-header .column-header__title svg {
   display: none;
+}
+.layout-single-column .column-header__button svg {
+  width: 19px;
+  height: 19px;
 }
 .layout-single-column .column-header__button svg path {
   visibility: visible !important;
