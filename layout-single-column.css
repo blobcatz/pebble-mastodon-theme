@@ -1104,7 +1104,8 @@ body.app-body.layout-single-column,
 .layout-single-column .display-name .emojione,
 .layout-single-column .status__display-name .emojione,
 .layout-single-column .notification-group .emojione,
-.layout-single-column .reactions-bar .emojione {
+.layout-single-column .reactions-bar .emojione,
+.layout-single-column .status__prepend .emojione {
   width: auto;
   height: 16px;
 }
