@@ -1080,10 +1080,16 @@ body.app-body.layout-single-column,
 .layout-single-column .account__header .icon-lock::before {
   visibility: visible;
 }
-.layout-single-column .reply-indicator__content .emojione,
-.layout-single-column .status__content .emojione {
+.layout-single-column .emojione {
   width: auto;
   height: 28px;
+}
+.layout-single-column .display-name .emojione,
+.layout-single-column .status__display-name .emojione,
+.layout-single-column .notification-group .emojione,
+.layout-single-column .reactions-bar .emojione {
+  width: auto;
+  height: 16px;
 }
 .layout-single-column .actions-modal,
 .layout-single-column .block-modal,
