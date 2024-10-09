@@ -1508,6 +1508,12 @@ body.app-body.layout-single-column,
 .layout-single-column .status__content--with-spoiler > p[style="margin-bottom: 0px;"]::after {
   opacity: 1;
 }
+@media screen and (max-width: 424px) {
+  .layout-single-column .announcements .reactions-bar {
+    width: calc(100% - 74px);
+    margin-left: unset;
+  }
+}
 .layout-single-column .detailed-status__meta__line:first-child {
   border-bottom: 0;
 }
