@@ -1034,6 +1034,23 @@ body.app-body.layout-single-column,
   border-top-right-radius: 0px;
   margin-bottom: 2px;
 }
+.layout-single-column .announcements .announcements__mastodon {
+  position: absolute;
+}
+.layout-single-column .announcements .announcements__container {
+  width: 100%;
+}
+.layout-single-column .announcements .reactions-bar {
+  width: calc(100% - 167px);
+  margin-left: 110px;
+}
+.layout-single-column .announcements .announcements__pagination {
+  display: flex;
+  align-items: center;
+}
+.layout-single-column .announcements .emoji-picker-dropdown {
+  height: 24px;
+}
 .layout-single-column .column-header__collapsible,
 .layout-single-column .account__header__image,
 .layout-single-column .account__header__bar {
