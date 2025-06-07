@@ -1,5 +1,5 @@
 > [!NOTE]
-> Pebble.social went down, no idea why. This theme's going to get a revamp, eventually. Probably when I'm back on Mastodon, and it'll probably be for the glitch-soc fork only.
+> Pebble.social went down and I don't care about fedi as much as I used to. Maybe one day.
 # Pebble theme for Mastodon
 ![Preview of the theme](preview.png)
 Supports single column mode only.
